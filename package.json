@@ -1,0 +1,55 @@
+{
+  "name": "btc-trading-bot",
+  "version": "1.0.0",
+  "description": "Automated Bitcoin trading system using EMA/RSI strategy",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "bitcoin",
+    "trading",
+    "bot",
+    "bybit",
+    "ema",
+    "rsi"
+  ],
+  "author": "Quant Developer",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "technicalindicators": "^3.1.0",
+    "uuid": "^9.0.0",
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "@types/uuid": "^10.0.0",
+    "@types/ws": "^8.5.4",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "roots": ["<rootDir>/src"],
+    "testMatch": ["**/__tests__/**/*.test.ts", "**/?(*.)+(spec|test).ts"],
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!src/**/*.test.ts",
+      "!src/**/*.d.ts"
+    ]
+  }
+}
